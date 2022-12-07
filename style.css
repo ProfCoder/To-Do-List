@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;500;700&family=Roboto:wght@400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing:  border-box;
+}
+ 
+body {
+    background-color:#92A8D1;
+}
+/* ------------------------------------------ */
+/* ------------- Welcome Rasif -------------- */
+/* ------------------------------------------ */
+.rasif{
+    text-align: center;
+    margin: 10px 0 70px 0;
+}
+
+.waviy {
+  position: relative;
+  -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0,0,0,.2));
+  font-size: 60px;
+}
+.waviy span {
+  font-family: 'Alfa Slab One', cursive;
+  position: relative;
+  display: inline-block;
+  color: #fff;
+  text-transform: uppercase;
+  animation: waviy 1s infinite;
+  animation-delay: calc(.1s * var(--i));
+  
+}
+@keyframes waviy {
+  0%,40%,100% {
+    transform: translateY(0)
+  }
+  20% {
+    transform: translateY(-20px)
+  }
+}
+/* ------------------------------------------ */
+/* --------------- To-Do List --------------- */
+/* ------------------------------------------ */
+.wrapper {
+    border: 1px solid #C4C4C4;
+    border-radius: 12px;
+    background-color: #fff;
+    width: 20%;
+    min-width: 336px;
+    min-height: 236px;
+    margin: auto;
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    font-family: 'Roboto', sans-serif;
+}
+
+.top {
+    background-color: #FFDC40;
+    height: 28px;
+    width: 100%;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    margin-top: 15px;
+    font-size: 26px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.20); 
+}
+
+form {
+    width: 100%;
+}
+
+.sort {
+    height: 20px;
+    width: 90%;
+    margin: 10px auto;
+    display: flex;
+    justify-content:space-between;
+}
+
+.sort-icon { 
+    width: 25px;
+    height: 15px;
+}
+
+.sort-icon:hover {
+    cursor:pointer;
+    width: 27px;
+    height: 17px;
+}
+/* ----------- Sorting Empty List ------------- */
+.message {
+    color:brown;
+    font-style: italic;
+}
+/* ----------- Input Section ------------- */
+.input-wrapper {
+    position: relative;
+    min-height: 40px;
+    width: 90%;
+    border:1px solid #C4C4C4;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.10); 
+    margin: auto;
+}
+
+.input-item {
+    height: 40px;
+    border: none;
+    width: 100%;
+    padding: 0 60px 0 20px;
+    display: block;
+    margin: auto;
+    outline:none;
+    font-size: 18px;
+    color:orangered;
+}
+
+::placeholder { 
+    color: lightgray;
+    font-size: 16px;
+    opacity: 1;
+  }
+
+.delete-item {
+    color: gray;
+    position: absolute;
+    background: none;
+    bottom: 7px;
+    right: 25px;
+    border: 1px solid gray;
+    border-radius: 50%;
+    height: 25px;
+    width: 25px;
+    cursor: pointer;
+}
+
+.delete-item:hover {
+    background-color: #833AE0;
+    color: #fff;
+    border: none;
+}
+
+.task {
+    padding: 10px 60px 10px 10px;
+    position: relative;
+}
+
+.item {
+    padding: 30px 10px;
+}
+
+.delete-existing {
+    color: gray;
+    position: absolute;
+    background: none;
+    top: 10px;
+    right: 25px;
+    border: 1px solid gray;
+    border-radius: 50%;
+    padding: 3px 7px;
+    font-size: 14px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.delete-existing:hover {
+    background-color: #833AE0;
+    color: #fff;
+}
+/* ----------- Add Button ------------- */
+.add {
+    margin: 20px 0;
+    position: relative;
+}
+.add-item {
+    background-color: #833AE0;
+    border: 1px solid #000000;
+    border-radius: 71px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); 
+    color: #fff;
+    width: 150px;
+    height: 42px;
+    display: block;
+    margin: auto;
+}
+
+.add-item:hover  {
+    background-color: #9953F1;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.add-item:hover + .add-item-plus {
+    background-color: #833AE0;
+    cursor: pointer;
+}
+
+.add-item-plus {
+    color: #fff;
+    border-radius: 50%;
+    background-color: #9953F1;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 90px;
+    top: 0;
+}
+
+.add-item-plus:hover {
+    cursor: pointer;
+}
+/* ------------------------------------------ */
+/* --------------- Drag & Drop -------------- */
+/* ------------------------------------------ */
+.drag-drop {
+    margin: 30px 0;
+    list-style: none;
+}
+
+.drag-drop li {
+    margin-top: 10px;
+    border: 1px dashed #833AE0;
+    border-radius: 10px;
+    padding: 15px 25px;
+    text-align: center;
+}
+
+.drag-drop li:hover {
+    font-size: 18px;
+    font-weight: 700;
+    border: 2px solid #833AE0;
+    cursor: move;
+}
